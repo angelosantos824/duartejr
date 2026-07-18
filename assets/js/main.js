@@ -136,8 +136,8 @@ function populateContent() {
 }
 
 function slowCompanyVideo() {
-  document.querySelectorAll('.company-video').forEach((video) => {
-    video.playbackRate = 0.75;
+  document.querySelectorAll('.slow-video').forEach((video) => {
+    video.playbackRate = 0.5;
   });
 }
 

@@ -93,14 +93,7 @@
 }
 
 .offer-card-body::before {
-  position: absolute;
-  right: -1px;
-  top: -74px;
-  width: 34%;
-  height: 74px;
-  border-radius: 0 0 0 8px;
-  background: var(--offer-glass-bg);
-  content: "";
+  display: none;
 }
 
 .offer-options {
