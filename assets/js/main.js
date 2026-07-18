@@ -141,10 +141,66 @@ function slowCompanyVideo() {
   });
 }
 
+function bindOfferForms() {
+  document.querySelectorAll('.offer-card').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = form.querySelector('[name="name"]')?.value || '';
+      const email = form.querySelector('[name="email"]')?.value || '';
+      const message = form.querySelector('[name="message"]')?.value || '';
+      const text = `Ola! Visitei o site da Duarte JR e gostaria de uma oferta personalizada.\nNome: ${name}\nE-mail: ${email}\nSobre a viagem: ${message}`;
+      window.open(whatsappUrl(text), '_blank', 'noopener');
+    });
+  });
+}
+
+function bindContactModal() {
+  const modal = document.getElementById('contact-modal');
+  if (!modal) return;
+
+  const openModal = () => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    modal.querySelector('input')?.focus();
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  };
+
+  document.querySelectorAll('[data-open-contact-modal]').forEach((button) => {
+    button.addEventListener('click', openModal);
+  });
+
+  modal.querySelectorAll('[data-close-contact-modal]').forEach((button) => {
+    button.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+}
+
+function bindOfferOptions() {
+  document.querySelectorAll('.offer-option').forEach((button) => {
+    button.addEventListener('click', () => {
+      const group = button.closest('.offer-options');
+      group?.querySelectorAll('.offer-option').forEach((option) => option.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   populateSiteData();
   populateContent();
   renderServices();
   renderFleetPreview();
   slowCompanyVideo();
+  bindOfferForms();
+  bindContactModal();
+  bindOfferOptions();
 });

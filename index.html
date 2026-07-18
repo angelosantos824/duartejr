@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="assets/css/pages/home.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body>
+<body class="home-page">
   <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
@@ -32,7 +32,7 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <a class="btn btn-primary" href="contato.html">Solicitar Orcamento</a>
+        <button class="btn btn-primary" type="button" data-open-contact-modal>Entre em contato</button>
         <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
       </div>
     </div>
@@ -45,30 +45,51 @@
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content container">
-        <h1 data-content="hero-title"></h1>
-        <p data-content="hero-description"></p>
-        <p data-content="hero-secondary"></p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="contato.html">Solicitar Orcamento</a>
-          <a class="btn btn-secondary hero-secondary-btn" href="frota.html">Conhecer nossa frota</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Transporte e turismo</p>
+          <h1 data-content="hero-title"></h1>
+          <p data-content="hero-description"></p>
+          <p data-content="hero-secondary"></p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="contato.html">Entre em contato</a>
+            <a class="btn btn-secondary hero-secondary-btn" href="frota.html">Conhecer nossa frota</a>
+          </div>
+          <div class="hero-badge" data-content="hero-highlight"></div>
         </div>
-        <div class="hero-badge" data-content="hero-highlight"></div>
+        <form class="offer-card hero-contact-card" id="hero-contact-form">
+          <div class="offer-card-title">
+            <h2>Obtenha uma oferta personalizada</h2>
+          </div>
+          <div class="offer-card-body">
+            <div class="offer-options" role="group" aria-label="Tipo de atendimento">
+              <button class="offer-option active" type="button"><span aria-hidden="true">&#9635;</span> Obter um orcamento para a minha viagem</button>
+              <button class="offer-option" type="button"><span aria-hidden="true">&#9636;</span> Consulta Empresarial</button>
+            </div>
+            <label for="hero-name"><span>Nome completo</span><input id="hero-name" name="name" autocomplete="name" required></label>
+            <label for="hero-email"><span>O seu e-mail</span><input id="hero-email" name="email" type="email" autocomplete="email"></label>
+            <label for="hero-message"><span>Fale-nos sobre os seus planos</span><textarea id="hero-message" name="message" rows="3"></textarea></label>
+            <div class="offer-card-footer">
+              <label class="privacy-check" for="hero-privacy"><input id="hero-privacy" type="checkbox" required> Li e concordo com a <a href="politica-privacidade.html">Politica de Privacidade</a></label>
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
 
-    <section class="highlights container" aria-label="Destaques">
+    <!-- <section class="highlights container" aria-label="Destaques">
       <ul class="highlights-list">
         <li>Atendimento personalizado</li>
         <li>Veiculos confortaveis</li>
         <li>Motoristas preparados</li>
         <li>Viagens para grupos</li>
       </ul>
-    </section>
+    </section> -->
 
     <section class="company container">
       <div class="company-media">
         <video class="company-video" autoplay muted loop playsinline aria-label="Transporte terrestre na Regiao Norte">
-          <source src="assets/images/fleet/Isso_faz_o_v%C3%ADdeo.mp4" type="video/mp4">
+          <source src="assets/images/fleet/Isso_faz_o_video.mp4" type="video/mp4">
         </video>
       </div>
       <div class="company-text">
@@ -121,7 +142,7 @@
           <p>Entre em contato e solicite um orcamento personalizado para o seu grupo.</p>
         </div>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="contato.html">Solicitar Orcamento</a>
+          <a class="btn btn-primary" href="contato.html">Entre em contato</a>
           <a class="btn btn-secondary" data-whatsapp-link href="https://wa.me/5592991000097">Falar pelo WhatsApp</a>
         </div>
       </div>
@@ -139,10 +160,34 @@
     </section>
   </main>
 
+  <div class="contact-modal" id="contact-modal" aria-hidden="true">
+    <div class="contact-modal-backdrop" data-close-contact-modal></div>
+    <div class="contact-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-offer-title">
+      <form class="offer-card modal-offer-card" id="modal-contact-form">
+        <div class="offer-card-title">
+          <h2 id="modal-offer-title">Obtenha uma oferta personalizada</h2>
+        </div>
+        <div class="offer-card-body">
+          <div class="offer-options" role="group" aria-label="Tipo de atendimento">
+            <button class="offer-option active" type="button"><span aria-hidden="true">&#9635;</span> Obter um orcamento para a minha viagem</button>
+            <button class="offer-option" type="button"><span aria-hidden="true">&#9636;</span> Consulta Empresarial</button>
+          </div>
+          <label for="modal-name"><span>Nome completo</span><input id="modal-name" name="name" autocomplete="name" required></label>
+          <label for="modal-email"><span>O seu e-mail</span><input id="modal-email" name="email" type="email" autocomplete="email"></label>
+          <label for="modal-message"><span>Fale-nos sobre os seus planos</span><textarea id="modal-message" name="message" rows="3"></textarea></label>
+          <div class="offer-card-footer">
+            <label class="privacy-check" for="modal-privacy"><input id="modal-privacy" type="checkbox" required> Li e concordo com a <a href="politica-privacidade.html">Politica de Privacidade</a></label>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-column footer-brand">
-        <img src="assets/images/logo-duarte-jr-footer.png" alt="Duarte JR">
+        <img src="assets/images/logo-duarte-jr-transparent.svg" alt="Duarte JR">
         <p>Transporte especial, turismo e atendimento para grupos.</p>
       </div>
       <div class="footer-column">
@@ -163,7 +208,7 @@
         <p>Regiao Norte</p>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span data-company-year></span> Duarte JR. Todos os direitos reservados. Desenvolvido por <a href="https://www.dozedev.pt" target="_blank" rel="noopener">dozedev.pt</a></p>
+        <p>&copy; <span data-company-year></span> Duarte JR. Todos os direitos reservados. <a href="politica-privacidade.html">Politica de Privacidade</a>. Desenvolvido por <a href="https://www.dozedev.pt" target="_blank" rel="noopener">dozedev.pt</a></p>
       </div>
     </div>
   </footer>

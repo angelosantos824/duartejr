@@ -23,8 +23,10 @@ main {
   left: 0;
   right: 0;
   z-index: 60;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+  background: rgba(255, 255, 255, .78);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .header-inner {
@@ -59,14 +61,14 @@ main {
   align-items: center;
   min-height: 40px;
   padding: .45rem .7rem;
-  color: var(--color-black);
+  color: var(--color-text);
   border-radius: 6px;
   font-weight: 700;
 }
 
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
-  background: rgba(255, 255, 255, .12);
+  background: rgba(6, 79, 163, .08);
 }
 
 .header-actions {
@@ -81,7 +83,7 @@ main {
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 82px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -103,16 +105,16 @@ main {
 
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(6, 44, 94, .86) 0%, rgba(6, 44, 94, .68) 42%, rgba(6, 44, 94, .3) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .45));
+    linear-gradient(90deg, rgba(0, 0, 0, .72) 0%, rgba(0, 0, 0, .52) 46%, rgba(6, 44, 94, .35) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, .42));
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  width: 100%;
   color: var(--color-white);
-  padding-top: 2rem;
+  padding-top: 7.4rem;
   padding-bottom: 2rem;
 }
 
@@ -127,6 +129,10 @@ main {
   max-width: 720px;
   margin-bottom: .75rem;
   font-size: 1.08rem;
+}
+
+.hero-copy .eyebrow {
+  color: var(--color-road-yellow);
 }
 
 .hero-cta,
@@ -204,7 +210,7 @@ main {
 }
 
 .footer-brand img {
-  width: 132px;
+  width: 142px;
   max-width: 100%;
   height: auto;
   margin-bottom: .55rem;
@@ -325,10 +331,10 @@ main {
     justify-content: center;
     min-height: 40px;
     padding: .45rem .65rem;
-    border: 1px solid rgba(255, 255, 255, .3);
+    border: 1px solid rgba(6, 44, 94, .26);
     border-radius: 6px;
-    background: transparent;
-    color: var(--color-white);
+    background: rgba(255, 255, 255, .78);
+    color: var(--color-primary-dark);
     font-weight: 800;
   }
 
@@ -354,6 +360,12 @@ main {
 
   .nav-open .main-nav a {
     width: 100%;
+    color: var(--color-white);
+  }
+
+  .nav-open .main-nav a:hover,
+  .nav-open .main-nav a[aria-current="page"] {
+    background: rgba(255, 255, 255, .16);
   }
 
   .header-actions .btn {
@@ -361,7 +373,7 @@ main {
   }
 
   .hero {
-    min-height: 720px;
+    min-height: auto;
   }
 
   .hero-overlay {
