@@ -370,6 +370,14 @@ body.modal-open {
     padding-top: 6.2rem;
   }
 
+  .home-page .hero {
+    min-height: 100svh;
+  }
+
+  .hero-media video {
+    min-height: 100%;
+  }
+
   .hero-contact-card {
     width: 100%;
   }
@@ -403,9 +411,18 @@ body.modal-open {
     display: grid;
   }
 
+  .company-media {
+    min-height: 220px;
+  }
+
+  .company-media video {
+    height: 100%;
+  }
+
   .destinations-video {
     width: 100%;
     margin-left: 0;
+    min-height: 170px;
     transform: none;
   }
 }

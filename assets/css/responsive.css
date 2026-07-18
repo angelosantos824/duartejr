@@ -5,7 +5,7 @@
   }
 
   .hero {
-    min-height: 660px;
+    min-height: 100svh;
   }
 
   .hero-content h1 {

@@ -97,8 +97,15 @@ main {
   inset: 0;
 }
 
+.hero-media {
+  z-index: 0;
+  display: block;
+  min-height: 100%;
+}
+
 .hero-media img,
 .hero-media video {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -379,7 +386,7 @@ main {
   }
 
   .hero {
-    min-height: auto;
+    min-height: 100svh;
   }
 
   .hero-overlay {
