@@ -1,0 +1,18 @@
+:root{
+  --color-primary: #064FA3;
+  --color-primary-dark: #062C5E;
+  --color-secondary: #E3262E;
+  --color-forest: #0B5D3B;
+  --color-forest-dark: #063D2A;
+  --color-road-yellow: #F4C430;
+  --color-white: #FFFFFF;
+  --color-background: #F3F6F5;
+  --color-text: #151A1D;
+  --color-text-light: #5F6B67;
+
+  --max-width: 1200px;
+  --container-padding: 1rem;
+  --radius: 8px;
+}
+
+html,body{height:100%;background:var(--color-background);color:var(--color-text);font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 700" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b5d3b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#062C5E" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#063D2A" />
+  <g transform="translate(0,40)">
+    <rect x="0" y="220" width="1920" height="260" fill="#2b6b3e" />
+    <path d="M0 420 C480 320 1440 320 1920 420 L1920 700 L0 700 Z" fill="#0b5d3b"/>
+    <rect x="860" y="300" width="200" height="20" fill="#F4C430" rx="4"/>
+  </g>
+  <text x="120" y="220" fill="#fff" font-size="56" font-family="Helvetica, Arial" font-weight="700">Viaje com segurança, conforto e tranquilidade</text>
+  <text x="120" y="280" fill="#fff" font-size="20" font-family="Helvetica, Arial">Transporte especial e turismo com saída de Manacapuru para diferentes destinos da Região Norte.</text>
+  <g transform="translate(120,320)">
+    <rect x="0" y="20" rx="6" ry="6" width="200" height="44" fill="#064FA3" />
+    <rect x="220" y="20" rx="6" ry="6" width="220" height="44" fill="#fff" />
+  </g>
+  <g transform="translate(1500,40)">
+    <circle cx="80" cy="80" r="60" fill="#E3262E"/>
+    <circle cx="80" cy="80" r="34" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aluguel - Duarte JR</title>
+  <meta name="description" content="Tipos de contratacao e solicitacao de orcamento">
+  <link rel="icon" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/aluguel.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="assets/images/logo-duarte-jr.png" alt="Duarte JR" class="logo"></a>
+      <nav class="main-nav" id="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a aria-current="page" href="aluguel.html">Aluguel</a></li>
+          <li><a href="frota.html">Frota</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary" href="contato.html">Solicitar Orcamento</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="inner-hero container">
+      <p class="eyebrow">Aluguel</p>
+      <h1>Aluguel de vans, micro-onibus e onibus</h1>
+      <p>Informe os dados principais da viagem para receber atendimento personalizado pelo WhatsApp oficial da Duarte JR.</p>
+    </section>
+
+    <section class="rental-options container">
+      <article class="card">
+        <h2>Modalidades</h2>
+        <ul>
+          <li>Aluguel de vans</li>
+          <li>Aluguel de micro-onibus</li>
+          <li>Aluguel de onibus</li>
+          <li>Transporte para eventos, empresas e turismo</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="quote-form container">
+      <div class="section-heading">
+        <p class="eyebrow">Orcamento</p>
+        <h2>Solicitar atendimento</h2>
+      </div>
+      <form id="quote-form">
+        <div class="form-grid">
+          <label for="name">Nome completo<input id="name" name="name" autocomplete="name" required></label>
+          <label for="phone">WhatsApp<input id="phone" name="phone" autocomplete="tel" required></label>
+          <label for="email">E-mail<input id="email" name="email" type="email" autocomplete="email"></label>
+          <label for="from">Local de saida<input id="from" name="from" required></label>
+          <label for="to">Destino<input id="to" name="to" required></label>
+          <label for="date-depart">Data de ida<input id="date-depart" name="date-depart" type="date" required></label>
+          <label for="date-return">Data de retorno<input id="date-return" name="date-return" type="date"></label>
+          <label for="passengers">Quantidade de passageiros<input id="passengers" name="passengers" type="number" min="1" required></label>
+          <label for="vehicle-type">Tipo de veiculo
+            <select id="vehicle-type" name="vehicle-type">
+              <option>Ainda nao sei</option>
+              <option>Van</option>
+              <option>Micro-onibus</option>
+              <option>Onibus</option>
+            </select>
+          </label>
+          <label for="service-type">Tipo de servico
+            <select id="service-type" name="service-type">
+              <option>Viagem terrestre</option>
+              <option>Traslado para aeroporto</option>
+              <option>Evento</option>
+              <option>Excursao</option>
+              <option>Turismo</option>
+              <option>Transporte empresarial</option>
+              <option>Igreja ou grupo</option>
+              <option>Outro</option>
+            </select>
+          </label>
+        </div>
+        <label for="obs">Observacoes<textarea id="obs" name="obs" rows="5"></textarea></label>
+        <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-column footer-brand">
+        <img src="assets/images/logo-duarte-jr-footer.png" alt="Duarte JR">
+        <p>Transporte especial, turismo e atendimento para grupos.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Contato</h2>
+        <a class="footer-contact-link" data-wa-primary href="https://wa.me/5592991000097">
+          <span class="footer-icon footer-icon-phone" aria-hidden="true"></span>
+        </a>
+        <a class="footer-contact-link" data-wa-secondary href="https://wa.me/5592981277757">
+          <span class="footer-icon footer-icon-whatsapp" aria-hidden="true"></span>
+        </a>
+        <a class="footer-contact-link" data-company-email href="mailto:transporteduartejr@gmail.com">
+          <span class="footer-icon footer-icon-email" aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="footer-column">
+        <h2>Atendimento</h2>
+        <p><span data-company-city></span> - <span data-company-state></span></p>
+        <p>Regiao Norte</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-company-year></span> Duarte JR. Todos os direitos reservados. Desenvolvido por <a href="https://www.dozedev.pt" target="_blank" rel="noopener">dozedev.pt</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/aluguel.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

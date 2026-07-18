@@ -1,0 +1,32 @@
+/* Responsive refinements */
+@media (max-width: 640px) {
+  :root {
+    --container-padding: 1rem;
+  }
+
+  .hero {
+    min-height: 660px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-cta .btn,
+  .cta-actions .btn,
+  .contact-actions .btn {
+    width: 100%;
+  }
+
+  .inner-hero {
+    padding-top: 2.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

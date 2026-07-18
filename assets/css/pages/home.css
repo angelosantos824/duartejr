@@ -1,0 +1,137 @@
+.highlights {
+  margin-top: 1.5rem;
+}
+
+.highlights-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.highlights-list li,
+.differentials li {
+  padding: .8rem;
+  border-left: 4px solid var(--color-secondary);
+  border-radius: 6px;
+  background: var(--color-white);
+  font-weight: 800;
+}
+
+.services,
+.company,
+.fleet-preview,
+.differentials,
+.tourism {
+  margin-top: 3rem;
+}
+
+.company {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.company-media img,
+.company-media video {
+  width: 100%;
+  aspect-ratio: 8 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.company-media {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.company-media video {
+  display: block;
+  transform: scale(1.18);
+  transform-origin: center;
+}
+
+.company-text {
+  display: grid;
+  gap: .8rem;
+}
+
+.fleet-preview > .btn {
+  margin-top: 1rem;
+}
+
+.differentials ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.tourism {
+  padding: 2rem;
+  border-radius: 8px;
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.tourism p {
+  max-width: 760px;
+}
+
+.cta-band {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background: var(--color-forest);
+  color: var(--color-white);
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.destinals {
+  margin-top: 3rem;
+}
+
+.destinals .cards {
+  margin-bottom: 1.6rem;
+}
+
+.destinations-video {
+  display: block;
+  width: min(calc(100vw - 9.5rem), 1610px);
+  aspect-ratio: 1610 / 405;
+  height: auto;
+  margin: 0 0 0 50%;
+  object-fit: cover;
+  object-position: center;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 860px) {
+  .highlights-list,
+  .differentials ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .company,
+  .cta-inner {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .destinations-video {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .highlights-list,
+  .differentials ul {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,36 @@
+.rental-options {
+  margin-bottom: 2rem;
+}
+
+.rental-options ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+  margin-top: .8rem;
+}
+
+.rental-options li {
+  padding: .75rem;
+  border-radius: 6px;
+  background: #f7faf9;
+  font-weight: 800;
+}
+
+.quote-form form {
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--color-white);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .05);
+}
+
+@media (max-width: 860px) {
+  .rental-options ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .rental-options ul {
+    grid-template-columns: 1fr;
+  }
+}
