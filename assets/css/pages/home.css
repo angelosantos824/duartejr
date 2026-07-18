@@ -56,7 +56,7 @@
 }
 
 .offer-card {
-  --offer-glass-bg: rgba(255, 255, 255, .78);
+  --offer-glass-bg: rgba(226, 229, 230, .84);
   align-self: center;
   display: grid;
   gap: 0;
@@ -99,8 +99,7 @@
   width: 34%;
   height: 74px;
   border-radius: 0 0 0 8px;
-  background: transparent;
-  box-shadow: -18px 18px 0 var(--offer-glass-bg);
+  background: var(--offer-glass-bg);
   content: "";
 }
 
@@ -213,7 +212,7 @@
 
 .contact-modal-dialog {
   position: relative;
-  width: min(560px, 100%);
+  width: min(460px, 100%);
 }
 
 .modal-offer-card {
